@@ -10,7 +10,7 @@ RUN git clone  https://github.com/animede/anime-crop.git
 WORKDIR /app/anime-crop
 RUN pip install --upgrade pip && pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu121
 RUN sh /install/01additional_pip_install.sh
-RUN patch -p0 < /install/02patch_basicSR.patch
+RUN cd / && patch -p1 < /install/02basicsr.patch
 RUN sh /install/03download_weights.sh
 
 CMD ["/bin/bash"]
