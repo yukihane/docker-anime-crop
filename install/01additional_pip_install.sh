@@ -8,6 +8,6 @@ pip install --no-cache-dir opencv-python
 
 pip install --no-cache-dir basicsr
 
-pip install --no-cache-dir numpy==1.26.3
+# pip install --no-cache-dir numpy==1.26.3
 
 pip install --no-cache-dir pytorch_lightning

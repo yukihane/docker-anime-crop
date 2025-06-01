@@ -1,5 +1,5 @@
---- /usr/local/lib/python3.11/site-packages/basicsr/data/degradations.py.orig	2025-05-31 16:59:41.284896251 +0000
-+++ /usr/local/lib/python3.11/site-packages/basicsr/data/degradations.py	2025-05-31 17:02:02.956293343 +0000
+--- /usr/local/lib/python3.12/dist-packages/basicsr/data/degradations.py.orig	2025-05-31 16:59:41.284896251 +0000
++++ /usr/local/lib/python3.12/dist-packages/basicsr/data/degradations.py	2025-05-31 17:02:02.956293343 +0000
 @@ -5,7 +5,7 @@
  import torch
  from scipy import special
