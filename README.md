@@ -1,4 +1,4 @@
-# Docker for anime-crop
+# Docker environment for anime-crop
 
 ## 説明
 
@@ -10,14 +10,25 @@ WSL2で動作確認しています。
 
 ## 使用方法
 
-### ビルド
+### ビルド(GPUを使用しない)
+
+冒頭リンク先の説明通りGPUを利用せずCPUのみで動作させる場合、こちらの手順でビルドします。
+GPUを利用する場合は本節をスキップし、次の節を参照してください。
+
+`feature/cpu` ブランチをチェックアウトし、ビルドします:
 
 ```sh
+git clone https://github.com/yukihane/docker-anime-crop.git -b feature/cpu
+cd docker-anime-crop
 docker compose build
 ```
 
 そこそこ時間がかかります。
-私の環境では15分程度かかりました。
+私の環境では20分程度かかりました。
+
+### ビルド(GPUを利用する)
+
+WIP
 
 ### 起動
 
