@@ -1,5 +1,5 @@
 services:
-  anime-crop:
+  anime-crop-without-upscale:
     build:
       context: .
       dockerfile: Dockerfile
