@@ -9,6 +9,7 @@ services:
       - "7860:7860"
     volumes:
       - ./shared_data:/shared_data
+    tty: true
     ipc: host  # --ipc=hostに相当
     ulimits:   # --ulimitオプションに相当
       memlock:
