@@ -15,10 +15,10 @@ WSL2で動作確認しています。
 冒頭リンク先の説明通りGPUを利用せずCPUのみで動作させる場合、こちらの手順でビルドします。
 GPUを利用する場合は本節をスキップし、次の節を参照してください。
 
-`feature/cpu` ブランチをチェックアウトし、ビルドします:
+`feature/cpu-without-upscale` ブランチ(推奨; リサイズ処理が重いのでそのような処理が発生する条件ではエラーにする)、あるいは `feature/cpu` ブランチ(オリジナル)をチェックアウトし、ビルドします:
 
 ```sh
-git clone https://github.com/yukihane/docker-anime-crop.git -b feature/cpu
+git clone https://github.com/yukihane/docker-anime-crop.git -b feature/cpu-without-upscale
 cd docker-anime-crop
 docker compose build
 ```
