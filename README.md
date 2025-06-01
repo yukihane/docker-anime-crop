@@ -26,9 +26,31 @@ docker compose build
 そこそこ時間がかかります。
 私の環境では20分程度かかりました。
 
+「起動」節までスキップしてください。
+
+### GPUを利用する場合の環境セットアップ
+
+前節「ビルド(GPUを使用しない)」でビルドした環境だと実用的な時間で処理が終わらない(注)のでGPU(CUDA)を利用するようにセットアップします。
+
+注: おそらくReal-ESRGANが重い; 逆に言うとアップスケールが発生しないなら実用的な範囲で収まると思われる
+
+[WSL で NVIDIA CUDA を有効にする](https://learn.microsoft.com/ja-jp/windows/ai/directml/gpu-cuda-in-wsl) からたどれる資料を参考にして環境をセットアップします。
+
+資料、とは具体的にはNVIDIAの公式資料[CUDA on WSL User Guide](https://docs.nvidia.com/cuda/wsl-user-guide/index.html)で、やるべきことをもう少し詳しく書くと:
+
+- WindowsにNVIDIAドライバーをインストールする
+- WSL2環境に[NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)をインストールする
+- WSL2環境に[CUDA Toolkit](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_network)をインストールする
+
 ### ビルド(GPUを利用する)
 
-WIP
+`main` ブランチをチェックアウトし、ビルドします:
+
+```sh
+git clone https://github.com/yukihane/docker-anime-crop.git -b main
+cd docker-anime-crop
+docker compose build
+```
 
 ### 起動
 
