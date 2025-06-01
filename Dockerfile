@@ -18,4 +18,8 @@ RUN sh /install/01additional_pip_install.sh
 RUN cd / && patch -p1 < /install/02basicsr.patch
 RUN sh /install/03download_weights.sh
 
+RUN git remote add yukihane https://github.com/yukihane/anime-crop.git \
+    && git fetch yukihane \
+    && git checkout yukihane/feature/without-upscale
+
 CMD ["python", "anime_face_seg.py"]
